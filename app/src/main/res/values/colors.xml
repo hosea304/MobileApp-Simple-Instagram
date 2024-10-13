@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="colorSuccess">#4CAF50</color>
-    <color name="colorError">#F44336</color>
-    <color name="text_color">#000000</color>
+    <color name="colorPrimary">#FCF8E8</color>
+    <color name="colorPrimaryVariant">#E8E4D8</color> <!-- Slightly darker variant for colorPrimary -->
+    <color name="colorOnPrimary">#000000</color> <!-- Contrast color for primary background, usually black or dark -->
+    <color name="colorSecondary">#D4E2D4</color>
+    <color name="colorAccent">#ECB390</color>
+    <color name="colorQuart">#DF7861</color>
+    <color name="colorPrimaryDark">#CBC4B4</color> <!-- Darker tone for the primary color -->
 </resources>
+

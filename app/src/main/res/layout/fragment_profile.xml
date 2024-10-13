@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_person"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"
+            android:contentDescription="@string/profile_picture_description" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/AppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="name"
+            android:background="@color/colorSecondary"
+            android:drawableStart="@drawable/ic_person"
+            android:hint="@string/name_hint"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textColorHint="#6D6D6D" />
+
+        <EditText
+            android:id="@+id/etNim"
+            style="@style/AppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:autofillHints="username"
+            android:background="@color/colorSecondary"
+            android:drawableStart="@drawable/ic_id"
+            android:hint="@string/nim_hint"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textColorHint="#6D6D6D" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/AppButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/colorQuart"
+            android:text="@string/save_button_text"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/AppButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout_button_text"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

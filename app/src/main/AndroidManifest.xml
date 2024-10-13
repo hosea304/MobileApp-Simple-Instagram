@@ -29,7 +29,8 @@
         <activity android:name=".ui.auth.RegisterActivity" />
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.story.PostStoryActivity" />
-
+        <activity android:name=".ui.auth.UserInfoActivity" />
+        
     </application>
 
 </manifest>

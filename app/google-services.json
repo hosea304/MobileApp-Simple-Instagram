@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "468535123912",
+    "project_id": "if570lab-uts-hosea-00000070462",
+    "storage_bucket": "if570lab-uts-hosea-00000070462.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468535123912:android:870414313aee35ffb9aafd",
+        "android_client_info": {
+          "package_name": "com.example.if570_lab_uts_hosea_00000070462"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468535123912-efrgv4ne6qncm4of2e8971lpmbp8u23g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.if570_lab_uts_hosea_00000070462",
+            "certificate_hash": "063ec4efa894a632940f6fb559b44629c9127024"
+          }
+        },
+        {
+          "client_id": "468535123912-7es2eagc6ervpqgem3g43cen3lrjagto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbHFwvFo9uQr_jMdphVWb2zVJIEOOJugM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468535123912-7es2eagc6ervpqgem3g43cen3lrjagto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

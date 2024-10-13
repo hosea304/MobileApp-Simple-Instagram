@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etStoryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your story here..."
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:gravity="top|start"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnAddImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/ivStoryImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnPostStory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Story"/>
+
+
+
+</LinearLayout>

@@ -41,8 +41,8 @@ class LoginActivity : AppCompatActivity() {
         val registerButton = findViewById<Button>(R.id.registerButton)
 
         loginButton.setOnClickListener {
-            val email = emailEditText.text.toString()
-            val password = passwordEditText.text.toString()
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 lifecycleScope.launch {

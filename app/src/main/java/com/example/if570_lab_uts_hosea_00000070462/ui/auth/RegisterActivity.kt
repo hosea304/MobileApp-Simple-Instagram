@@ -28,9 +28,9 @@ class RegisterActivity : AppCompatActivity() {
         val registerButton = findViewById<Button>(R.id.registerButton)
 
         registerButton.setOnClickListener {
-            val email = emailEditText.text.toString()
-            val password = passwordEditText.text.toString()
-            val confirmPassword = confirmPasswordEditText.text.toString()
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
+            val confirmPassword = confirmPasswordEditText.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
                 if (password == confirmPassword) {
@@ -38,8 +38,7 @@ class RegisterActivity : AppCompatActivity() {
                         val result = authRepository.register(email, password)
                         if (result.isSuccess) {
                             ToastUtil.showSuccessToast(this@RegisterActivity, "Registration successful")
-                            startActivity(Intent(this@RegisterActivity, MainActivity::class.java))
-                            finish()
+                            navigateToMainActivity()
                         } else {
                             ToastUtil.showErrorToast(this@RegisterActivity, result.exceptionOrNull()?.message ?: "Registration failed")
                         }
@@ -51,5 +50,11 @@ class RegisterActivity : AppCompatActivity() {
                 ToastUtil.showErrorToast(this, "Please fill in all fields")
             }
         }
+    }
+
+    private fun navigateToMainActivity() {
+        val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -41,15 +41,20 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                android:textColorHint="#6D6D6D"
+                app:cursorColor="#6D6D6D"
+                app:hintTextColor="#6D6D6D">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/nameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="name"
+                    android:background="@color/colorSecondary"
                     android:hint="@string/name_hint"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,15 +64,20 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                android:textColorHint="#6D6D6D"
+                app:cursorColor="#6D6D6D"
+                app:hintTextColor="#6D6D6D">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/nimEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="username"
+                    android:background="@color/colorSecondary"
                     android:hint="@string/nim_hint"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textColor="@android:color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,9 +88,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:background="@color/colorQuart"
                 android:backgroundTint="@color/colorPrimary"
                 android:text="@string/save_button_text"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/colorQuart" />
 
         </LinearLayout>
 

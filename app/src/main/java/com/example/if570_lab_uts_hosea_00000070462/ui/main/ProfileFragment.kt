@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.if570_lab_uts_hosea_00000070462.R
 import com.example.if570_lab_uts_hosea_00000070462.ui.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -76,7 +77,10 @@ class ProfileFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
             selectedImageUri = data.data
-            ivProfilePicture.setImageURI(selectedImageUri)
+            Glide.with(this)
+                .load(selectedImageUri)
+                .transform(CircleCrop())
+                .into(ivProfilePicture)
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
@@ -101,7 +105,10 @@ class ProfileFragment : Fragment() {
                     }
                 }
                 .addOnFailureListener { e ->
-                    ToastUtil.showErrorToast(requireContext(), "Failed to upload image: ${e.message}")
+                    ToastUtil.showErrorToast(
+                        requireContext(),
+                        "Failed to upload image: ${e.message}"
+                    )
                 }
         } else {
             updateUserProfile(userId, userMap)
@@ -130,13 +137,22 @@ class ProfileFragment : Fragment() {
                     val profileImageUrl = document.getString("profileImageUrl")
 
                     if (profileImageUrl != null) {
-                        Glide.with(this).load(profileImageUrl).into(ivProfilePicture)
+                        Glide.with(this)
+                            .load(profileImageUrl)
+                            .transform(CircleCrop())
+                            .into(ivProfilePicture)
                     } else {
                         // If user registered via Google, use Google profile photo
                         if (user.photoUrl != null) {
-                            Glide.with(this).load(user.photoUrl).into(ivProfilePicture)
+                            Glide.with(this)
+                                .load(user.photoUrl)
+                                .transform(CircleCrop())
+                                .into(ivProfilePicture)
                         } else {
-                            ivProfilePicture.setImageResource(R.drawable.ic_person)
+                            Glide.with(this)
+                                .load(R.drawable.ic_person)
+                                .transform(CircleCrop())
+                                .into(ivProfilePicture)
                         }
                     }
                 }

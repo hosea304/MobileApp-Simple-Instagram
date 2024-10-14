@@ -76,10 +76,10 @@ class HomeFragment : Fragment(), StoryAdapter.StoryInteractionListener {
         }
     }
 
-    override fun onSaveClicked(story: Story) {
-        story.isSaved = !story.isSaved
-        storyAdapter.updateStory(story)
-    }
+//    override fun onSaveClicked(story: Story) {
+//        story.isSaved = !story.isSaved
+//        storyAdapter.updateStory(story)
+//    }
 
     override fun onResume() {
         super.onResume()

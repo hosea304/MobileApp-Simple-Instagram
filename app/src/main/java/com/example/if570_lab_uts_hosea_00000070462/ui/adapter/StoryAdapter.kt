@@ -16,7 +16,7 @@ class StoryAdapter(val stories: MutableList<Story>, val listener: StoryInteracti
 
     interface StoryInteractionListener {
         fun onLikeClicked(story: Story)
-        fun onSaveClicked(story: Story)
+//        fun onSaveClicked(story: Story)
         fun onPinClicked(story: Story)
     }
 
@@ -25,7 +25,7 @@ class StoryAdapter(val stories: MutableList<Story>, val listener: StoryInteracti
         private val tvStoryText: TextView = itemView.findViewById(R.id.tvStoryText)
         private val btnLike: ImageButton = itemView.findViewById(R.id.btnLike)
         private val tvLikeCount: TextView = itemView.findViewById(R.id.tvLikeCount)
-        private val btnSave: ImageButton = itemView.findViewById(R.id.btnSave)
+//        private val btnSave: ImageButton = itemView.findViewById(R.id.btnSave)
         private val btnPin: ImageButton = itemView.findViewById(R.id.btnPin)
 
         private var lastClickTime: Long = 0
@@ -42,7 +42,7 @@ class StoryAdapter(val stories: MutableList<Story>, val listener: StoryInteracti
             }
 
             updateLikeButton(story.isLiked)
-            btnSave.setImageResource(if (story.isSaved) R.drawable.ic_bookmark_filled else R.drawable.ic_bookmark)
+//            btnSave.setImageResource(if (story.isSaved) R.drawable.ic_bookmark_filled else R.drawable.ic_bookmark)
             btnPin.setImageResource(if (story.isPinned) R.drawable.ic_pin_filled else R.drawable.ic_pin)
 
             itemView.setOnClickListener {
@@ -54,7 +54,7 @@ class StoryAdapter(val stories: MutableList<Story>, val listener: StoryInteracti
             }
 
             btnLike.setOnClickListener { listener.onLikeClicked(story) }
-            btnSave.setOnClickListener { listener.onSaveClicked(story) }
+//            btnSave.setOnClickListener { listener.onSaveClicked(story) }
             btnPin.setOnClickListener { listener.onPinClicked(story) }
         }
 
